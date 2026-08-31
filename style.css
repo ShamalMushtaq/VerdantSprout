@@ -2011,4 +2011,44 @@
     .cart-btn-main {
         padding: 0.5rem 0.75rem;
     }
+
+   /* ==========================================================================
+   TARGETED MOBILE OVERFLOW & ALIGNMENT FIXES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. Body ya wrapper par horizontal scroll rokne ke liye */
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* 2. Agar koi container fixed width le raha ho */
+    .container, .wrapper, section {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* 3. Images ya banners jo screen se bahar ja rahe hon */
+    img, svg, video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 4. Flex items ki wrapping fix karne ke liye */
+    .flex-row, .nav-links, .footer-links {
+        flex-wrap: wrap;
+    }
+
+    /* 5. Tables ya grids ka overflow handle karne ke liye */
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
 }
