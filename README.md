@@ -1,71 +1,72 @@
-Sprout Live](https://shamalmushtaq.github.io/Verdant---Sprout/)
 <div align="center">
 
-  # 🌱 Verdant & Sprout
-  ### *Nurturing Spaces, One Leaf at a Time*
+  # 🌿 Verdant & Sprout — Premium E-Commerce Experience
+  ### *Elevating Living Spaces Through Botanical Elegance*
 
   <p align="center">
-    A premium, responsive e-commerce web application crafted for a modern organic indoor plant nursery. Designed with elegance, speed, and seamless user experience in mind.
+    An enterprise-grade, fully responsive e-commerce web application engineered for an organic indoor plant boutique. Built with high-performance vanilla web technologies to deliver lightning-fast UI rendering and immersive shopping workflows.
   </p>
 
   <p align="center">
-    <a href="https://shamalmushtaq.github.io/Verdant---Sprout/"><strong>View Live Demo 🚀</strong></a>
+    <a href="https://shamalmushtaq.github.io/Verdant---Sprout/"><strong>Explore Live Application 🚀</strong></a>
   </p>
 
   <p align="center">
-    <img src="https://img.shields.io/badge/Status-Active%20Deployment-brightgreen?style=for-the-badge&logo=github" alt="Status">
-    <img src="https://img.shields.io/badge/Frontend-HTML5%20%7C%20CSS3%20%7C%20JS-blue?style=for-the-badge&logo=javascript" alt="Tech Stack">
-    <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License">
+    <img src="https://img.shields.io/badge/Architecture-Modular%20Vanilla%20JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JS">
+    <img src="https://img.shields.io/badge/Styling-CSS3%20Variables-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
+    <img src="https://img.shields.io/badge/Deployment-GitHub%20Pages-222222?style=for-the-badge&logo=github" alt="GitHub Pages">
   </p>
 </div>
 
 ---
 
-## 🌟 Executive Summary
+## 💎 Project Overview
 
-**Verdant & Sprout** bridges the gap between nature enthusiasts and premium indoor greenery through an immersive digital storefront. Built from scratch with clean semantics and robust frontend architecture, the platform offers an intuitive shopping experience complete with real-time filtering, custom product configurations, dynamic cart management, and fluid theme transitions.
-
----
-
-## ✨ Key Features & Capabilities
-
-* **🔍 Advanced Product Discovery:** Instant live search paired with category-based filtering allows users to effortlessly locate specific plants, succulents, or ferns.
-* **🎨 Custom Pot Configurator:** Empowers customers to personalize their plant selection by choosing custom pot styles and color finishes prior to purchase.
-* **🌙 Dynamic Dark/Light Mode:** Engineered with a seamless theme toggle, ensuring visual comfort and modern aesthetics across all lighting conditions.
-* **🛍️ Interactive Slide-Out Cart Drawer:** A fluid, real-time shopping bag management system that tracks quantities, calculates subtotals, and updates instantly without page reloads.
-* **💳 Simulated Checkout Flow:** A fully responsive mock checkout workflow featuring client-side validation and confirmation states to simulate a real-world e-commerce transaction.
-* **📱 Fully Responsive Layout:** Meticulously designed using flexible grids and media queries to deliver a flawless visual experience across desktops, tablets, and mobile devices.
+**Verdant & Sprout** is designed to showcase advanced frontend proficiency, clean code architecture, and exceptional UI/UX execution. Moving beyond basic templates, this project implements a fully interactive state-driven catalog, bespoke product customization features, dynamic drawer management, and multi-theme rendering entirely from scratch.
 
 ---
 
-## 🛠️ Technology Stack
+## 🚀 Core Architectural Highlights
 
-This application is engineered using core, high-performance web standards without unnecessary framework bloat:
-
-| Layer | Technology | Description |
-| :--- | :--- | :--- |
-| **Markup & Structure** | HTML5 | Semantic, accessible, and SEO-friendly document outline |
-| **Styling & Design** | CSS3 / Custom Properties | Modern layouts, CSS variables for theming, and smooth transitions |
-| **Behavior & Logic** | Vanilla JavaScript (ES6+) | DOM manipulation, state management, event handling, and interactivity |
-| **Hosting & CI/CD** | GitHub Pages | Fast, reliable global edge deployment directly from the repository |
+* **⚡ Real-Time DOM Filtering & Search Engine:** Instantaneous filtering across botanical categories combined with reactive keyword matching to isolate specific flora instantly.
+  
+* **🏺 Bespoke Product Customization:** An interactive configuration engine allowing users to alter pot aesthetics and finishes prior to committing items to their bag.
+  
+* **🌙 Advanced Theming Engine:** Built natively with CSS Custom Properties (Variables) to facilitate smooth, flicker-free transitions between light and dark presentation modes.
+  
+* **📦 Slide-Out Cart Architecture:** A robust state manager handling real-time item increments, deletions, subtotals, and shipping evaluations seamlessly within an off-canvas drawer.
+  
+* **🔒 Frictionless Checkout Simulation:** Designed with comprehensive client-side form validation states, progress indicators, and instant order success feedback modals.
+  
+* **📱 Fluid Responsive Grid System:** Developed using modern CSS Grid and Flexbox mechanics, ensuring absolute pixel perfection across mobile phones, tablets, and ultra-wide desktop displays.
 
 ---
 
-## 📂 Project Architecture
+## 🛠️ Technical Stack & Tooling
 
-```text
-Verdant---Sprout/
-│
-├── index.html              # Main storefront application markup
-├── style.css               # Comprehensive stylesheet (Theme variables, layout, animations)
-├── script.js               # Core application logic (Cart, search, filters, interactions)
-├── README.md               # Project documentation
-│
-└── assets/                 # Product imagery and visual resources
-    ├── Areca Palm.jpg
-    ├── Boston Fern.jpg
-    ├── Fiddle Leaf Fig.jpg
-    ├── Golden Pothos.jpg
-    ├── Monstera Deliciosa.jpg
-    ├── Peace Lily Sensation.jpg
-    └── Spider Plant.jpg
+* **Frontend Engine:** Vanilla JavaScript (ES6+, DOM API, Event Delegation)
+* **User Interface:** Semantic HTML5, Advanced CSS3, Flexbox/Grid
+* **Design System:** Custom Design Tokens, CSS Variables, SVG Graphics
+* **Version Control & Hosting:** Git, GitHub, GitHub Pages CI/CD
+
+---
+
+## 🎯 Future Enhancements
+
+- [ ] Integration with backend payment gateways (Stripe/PayPal)
+- [ ] Persistent user sessions using LocalStorage for cart data
+- [ ] Customer review and rating system modules
+- [ ] Multi-currency selector for global shoppers
+
+---
+
+## 👨‍💻 Author & Profile
+
+Crafted with precision and passion by **Shamal Mushtaq**. 
+
+- **GitHub Portfolio:** [@ShamalMushtaq](https://github.com/ShamalMushtaq)
+- **Role:** Software Engineering Student & Frontend Developer
+
+<div align="center">
+  <small>© 2026 Verdant & Sprout. All rights reserved.</small>
+</div>
