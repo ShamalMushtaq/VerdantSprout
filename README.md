@@ -8,7 +8,7 @@
   </p>
 
   <p align="center">
-    <a href="https://shamalmushtaq.github.io/Verdant---Sprout/"><strong>Explore Live Application 🚀</strong></a>
+    <a href="https://shamalmushtaq.github.io/VerdantSprout/"><strong>Explore Live Application 🚀</strong></a>
   </p>
 
   <p align="center">
