@@ -1296,7 +1296,7 @@
 
         .gallery-item .gallery-overlay {
             position: absolute;
-            inset: 0;
+            inset: 0 !important;
             background: rgba(44,53,43,0.35);
             display: flex;
             align-items: center;
@@ -1793,168 +1793,267 @@
             .footer-grid { grid-template-columns: 1fr; }
         }
 
-/* =======================================================================
-   FINAL CLEAN HEADER & LOGO MOBILE FIX
-========================================================================== */
+/* ==========================================================================
+   PRODUCT MODAL MOBILE FIX & NAVBAR LOGO WRAP FIX
+   ========================================================================== */
 
 @media (max-width: 768px) {
+    /* Navbar ki proper spacing */
     .nav-container, header nav, .navbar {
         display: flex !important;
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
         padding: 0.6rem 0.75rem !important;
-        gap: 0.5rem !important;
+        gap: 0.4rem !important;
         flex-wrap: nowrap !important;
+        overflow: visible !important;
     }
 
+    /* Logo size aur layout */
     .logo, .navbar-brand {
-        font-size: 1.05rem !important;
-        font-weight: 700;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 55% !important;
-        display: flex;
-        align-items: center;
-        gap: 0.3rem;
+        font-size: 0.9rem !important;
+        white-space: nowrap !important;
+        max-width: 52% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
     }
 
-    .logo img, .navbar-brand img {
-        max-height: 24px !important;
-        width: auto !important;
-    }
-
+    /* Action icons ke overlap ko khatam karne ke liye flex row aur proper gap */
     .nav-actions, .header-actions, .nav-icons {
         display: flex !important;
+        flex-direction: row !important;
         align-items: center !important;
-        gap: 0.3rem !important;
-        flex-shrink: 0;
+        gap: 0.4rem !important;
+        position: relative;
     }
 
+    /* Icons ka background aur border fix taake wo black circle na banein */
     .nav-actions button, 
     .header-actions button, 
     .nav-icons button,
-    .cart-btn-main, 
+    .icon-btn,
+    .cart-btn-main,
     .menu-toggle {
-        padding: 0.3rem !important;
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        max-width: 32px !important;
+        padding: 0 !important;
         font-size: 0.75rem !important;
-        min-width: 32px;
-        height: 32px;
-        border-radius: 50% !important; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative;
     }
 
-    .cart-btn-main {
-        border-radius: 20px !important;
-        padding: 0.3rem 0.6rem !important;
+   .cart-btn-main span:not(.badge-count):not(.cart-count) {
+        display: none !important;
+    }
+
+    .badge-count, .cart-count, .wishlist-count {
+        position: absolute !important;
+        top: -4px !important;
+        right: -4px !important;
+        width: 16px !important;
+        height: 16px !important;
+        background-color: #111 !important;
+        color: #fff !important;
+        font-size: 0.55rem !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        z-index: 10 !important;
+    }
+
+    /* Hero section ki alignment theek karna taake text aur image overlap na hon */
+   .hero {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        gap: 2rem !important;
+        padding: 1rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .hero-content {
+       width: 100% !important;
+       text-align: left !important;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero-image-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 16px !important;
+    }
+
+    .hero-image-wrapper img {
+        height: 300px !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    /* Search bar ko pori width (full width) dena */
+    .search-bar, .search-container, input[type="search"], input[type="text"][class*="search"], .search-input-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .search-bar input, .search-container input, input[type="search"] {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Filter buttons ko 2 columns ki grid banana */
+    .filter-buttons, .category-filters, .plant-filters, .filters-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .filter-btn, .category-btn, .filter-buttons button, .plant-filters button {
+        width: 100% !important;
+        min-width: 0 !important;
+        text-align: center !important;
+        padding: 0.5rem 0.25rem !important;
         font-size: 0.75rem !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        box-sizing: border-box !important;
     }
 
-    .cart-btn-main span:not(.cart-count) {
-        display: none !important; 
+    .sort-container, .sort-dropdown, select[class*="sort"] {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin-top: 0.2rem !important;
     }
-}
 
-/* ==========================================================================
-   PRODUCT MODAL MOBILE FIX (Screenshot Specific)
-   ========================================================================== */
-
-@media (max-width: 768px) {
+    /* --- FIXED PRODUCT MODAL STYLING --- */
     .modal, .product-modal, .modal-overlay {
-        padding: 10px !important;
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        max-width: 100% !important;
+        max-height: 100vh !important;
+        margin: 0 !important;
+        display: flex !important;
         align-items: flex-end !important;
-        justify-content: center;
+        justify-content: center !important;
+        background-color: rgba(44, 53, 43, 0.6) !important;
+        z-index: 99999 !important;
+        padding: 0 !important;
     }
 
     .modal-card, .product-modal-content {
-        max-height: 85vh !important;
+        position: relative !important;
         width: 100% !important;
         max-width: 100% !important;
-        overflow-y: auto !important; 
-        border-radius: 20px 20px 0 0 !important;
+        height: 85vh !important;
+        max-height: 85vh !important;
+        margin: 0 !important;
+        border-radius: 24px 24px 0 0 !important;
+        background: var(--card-bg, #ffffff) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow-y: auto !important;
         padding: 1.25rem !important;
-        margin-bottom: 0 !important;
+        box-sizing: border-box !important;
+        box-shadow: 0 -10px 30px rgba(0,0,0,0.2) !important;
     }
 
-    .modal-card img, .modal-img-box img, .product-modal img {
-        height: 180px !important;
-        object-fit: cover;
-        border-radius: 12px;
+    .modal-img-box {
+        width: 100% !important;
+        height: 220px !important;
+        min-height: 220px !important;
+        max-height: 220px !important;
+        overflow: hidden !important;
+        border-radius: 16px !important;
+        margin-bottom: 1rem !important;
+        flex-shrink: 0 !important;
     }
 
-    .planter-options, .select-planter, [class*="planter"] {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
+    .modal-img-box img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
     }
 
-    .planter-options button, .select-planter button {
-        flex: 1 1 calc(33.33% - 0.5rem);
-        font-size: 0.8rem;
-        padding: 0.5rem;
+    .modal-content {
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
-    .you-might-like, .related-products {
-        margin-top: 1.5rem;
+    .pot-options, .planter-options, .select-planter {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
     }
 
-    .you-might-like h3, .related-products h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.75rem;
+    .pot-option-btn, .planter-options button, .select-planter button {
+        flex: 1 1 calc(33.33% - 0.4rem) !important;
+        font-size: 0.75rem !important;
+        padding: 0.5rem 0.2rem !important;
+        text-align: center !important;
     }
 
     .you-might-like-grid, .related-grid {
         display: flex !important;
-        overflow-x: auto !important;
-        gap: 0.75rem !important;
-        padding-bottom: 0.5rem;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .you-might-like-grid::-webkit-scrollbar, 
-    .related-grid::-webkit-scrollbar {
-        display: none; 
-    }
-
-    .you-might-like-card, .related-card {
-        min-width: 110px !important;
-        flex: 0 0 110px !important;
-    }
-
-    .you-might-like-card img, .related-card img {
-        height: 90px !important;
-    }
-}
-
-/* ==========================================================================
-   SELECTED FILTER BUTTON CUTTING FIX
-   ========================================================================== */
-
-@media (max-width: 768px) {
-    .filter-container, .filters-wrapper, .categories-scroll {
-        display: flex !important;
+        flex-direction: row !important;
         flex-wrap: nowrap !important;
         overflow-x: auto !important;
+        gap: 0.75rem !important;
+        padding-bottom: 0.5rem !important;
         width: 100% !important;
-        padding: 0.25rem 0.5rem 0.75rem 0.5rem !important;
-        gap: 0.5rem !important;
         -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
     }
 
-    .filter-container::-webkit-scrollbar, 
-    .filters-wrapper::-webkit-scrollbar, 
-    .categories-scroll::-webkit-scrollbar {
-        display: none;
+    .you-might-like-card, .related-card, .related-item {
+        flex: 0 0 110px !important;
+        min-width: 110px !important;
     }
 
-    .filter-btn, .filter-chip, .category-pill, 
-    .filter-btn.active, .filter-chip.active {
-        flex: 0 0 auto !important;
-        white-space: nowrap !important;
+    .you-might-like-card img, .related-card img, .related-item img {
+        height: 85px !important;
+        width: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* Subscription Banner aur baqi 2-column grids ko mobile par stack karna */
+    .subscription-banner, .about-section, .contact-section {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 1.5rem 1rem !important;
+        gap: 2rem !important;
+        box-sizing: border-box !important;
+        grid-template-columns: none !important;
+    }
+
+    .subscription-content, .sub-plan-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 1.25rem !important;
         box-sizing: border-box !important;
     }
 }
